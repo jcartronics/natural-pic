@@ -15,7 +15,7 @@ import { MyContext } from './context/MyContext';
 function App() {
 
   //Define estados
-  const [fotos, setFotos] = useState({});
+  const [fotos, setFotos] = useState([]);
 
   const obtenerFotos = async() => {
     try {
@@ -26,11 +26,11 @@ function App() {
       if (!jsonData.photos.length > 0){
         throw new Error("No hay fotos!")
       } else {
-        setFotos(jsonData)
+        setFotos(jsonData.photos)
       }
 
     } catch (error) {
-      console.log("Error al obtener datos", error)
+      console.log("Error al obtener datos", error);
     }
   }
 

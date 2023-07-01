@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 
-export const Heart = () => {
+export const Heart = ({ filled }) => {
+
   return (
     <>
       <svg width="40px" viewBox="0 0 24 24">
